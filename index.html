@@ -27,10 +27,18 @@
   </head>
   <body>
     <div class="container">
-      <h1>Chrome Extension Icon Creator</h1>
+      <h1>
+        <img src="favicon/favicon-32x32.png" alt="logo" />
+        Chrome Extension Icon Creator
+      </h1>
       <input type="file" id="inputImage" onchange="resizeImage()" />
       <div id="outputImages"></div>
-      <button id="downloadAll" onclick="downloadAll()" disabled>
+      <button
+        id="downloadAll"
+        class="blue-button hidden"
+        onclick="downloadAll()"
+        disabled
+      >
         Download All
       </button>
     </div>

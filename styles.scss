@@ -10,18 +10,31 @@ body {
   width: 100vw;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+}
+
+.hidden {
+  display: none;
+}
+
 .container {
   width: 80%;
   max-width: 800px;
   margin: 0 auto;
   padding-top: 2rem;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @extend .flex;
 
   h1 {
     margin-bottom: 1rem;
+    @extend .flex;
+
+    img {
+      margin-right: 8px;
+    }
   }
 
   input[type='file'] {
@@ -30,24 +43,26 @@ body {
     color: #f0f0f0;
   }
 
+  .blue-button {
+    text-decoration: none;
+    color: #1e90ff;
+    border: 1px solid #1e90ff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    background: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #1e90ff;
+      color: #f0f0f0;
+    }
+  }
+
   #outputImages {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    a {
-      text-decoration: none;
-      color: #1e90ff;
-      border: 1px solid #1e90ff;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      transition: background-color 0.3s, color 0.3s;
-
-      &:hover {
-        background-color: #1e90ff;
-        color: #f0f0f0;
-      }
-    }
   }
 }

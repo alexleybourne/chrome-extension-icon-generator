@@ -30,6 +30,7 @@ function resizeImage() {
           outputImages.appendChild(preview);
 
           const link = document.createElement('a');
+          link.classList.add('blue-button');
           link.download = `icon${size}.${getFileExtension(
             inputImage.files[0].type
           )}`;
@@ -44,7 +45,9 @@ function resizeImage() {
           });
         });
 
-        document.getElementById('downloadAll').disabled = false;
+        const downloadAllButton = document.getElementById('downloadAll');
+        downloadAllButton.classList.remove('hidden');
+        downloadAllButton.disabled = false;
       };
     };
     reader.readAsDataURL(inputImage.files[0]);
