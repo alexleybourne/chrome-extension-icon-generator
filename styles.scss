@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: 'roboto', sans-serif;
+  background-color: #222;
+  color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  input[type='file'] {
+    margin-bottom: 2rem;
+    cursor: pointer;
+    color: #f0f0f0;
+  }
+
+  #outputImages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    a {
+      text-decoration: none;
+      color: #1e90ff;
+      border: 1px solid #1e90ff;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: #1e90ff;
+        color: #f0f0f0;
+      }
+    }
+  }
+}
