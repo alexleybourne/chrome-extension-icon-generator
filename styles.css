@@ -1,4 +1,4 @@
-.flex, body, .container, .container h1 {
+.flex, body, .container, .container h1, .container .blue-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,6 +12,9 @@
 
 .hidden {
   display: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
 }
 
 body {
@@ -55,6 +58,7 @@ body {
 }
 
 .container .blue-button {
+  margin-bottom: 10px;
   text-decoration: none;
   color: #1e90ff;
   border: 1px solid #1e90ff;
@@ -67,6 +71,12 @@ body {
   width: 160px;
   text-align: center;
   font-size: 0.9em;
+}
+
+.container .blue-button svg {
+  height: 16px;
+  width: 16px;
+  margin-left: 4px;
 }
 
 .container .blue-button:hover {
@@ -92,6 +102,10 @@ body {
 
 .container #outputImages img {
   margin-bottom: 1rem;
+}
+
+.container #downloadAll {
+  width: 194px;
 }
 
 footer {

@@ -6,6 +6,9 @@
 
 .hidden {
   display: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
 }
 
 body {
@@ -45,6 +48,7 @@ body {
   }
 
   .blue-button {
+    margin-bottom: 10px;
     text-decoration: none;
     color: #1e90ff;
     border: 1px solid #1e90ff;
@@ -56,6 +60,13 @@ body {
     width: 160px;
     text-align: center;
     font-size: 0.9em;
+    @extend .flex;
+
+    svg {
+      height: 16px;
+      width: 16px;
+      margin-left: 4px;
+    }
 
     &:hover {
       background-color: #1e90ff;
@@ -72,6 +83,10 @@ body {
     img {
       margin-bottom: 1rem;
     }
+  }
+
+  #downloadAll {
+    width: 194px;
   }
 }
 

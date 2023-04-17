@@ -63,7 +63,7 @@ function getFileExtension(mimeType) {
     case 'image/png':
       return 'png';
     default:
-      return 'unknown';
+      return 'png'; // Defaults to png
   }
 }
 
