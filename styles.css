@@ -1,8 +1,4 @@
-body {
-  margin: 0;
-  font-family: 'roboto', sans-serif;
-  background-color: #222;
-  color: #f0f0f0;
+.flex, body, .container, .container h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,22 +8,23 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
-  width: 100vw;
-}
-
-.flex, .container, .container h1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-self: center;
 }
 
 .hidden {
   display: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'roboto', sans-serif;
+  background-color: #222;
+  color: #f0f0f0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100vw;
 }
 
 .container {
@@ -47,6 +44,8 @@ body {
 
 .container h1 img {
   margin-right: 8px;
+  height: 36px;
+  width: 36px;
 }
 
 .container input[type='file'] {
@@ -65,6 +64,9 @@ body {
   transition: background-color 0.3s, color 0.3s;
   background: none;
   cursor: pointer;
+  width: 160px;
+  text-align: center;
+  font-size: 0.9em;
 }
 
 .container .blue-button:hover {
@@ -86,5 +88,32 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.container #outputImages img {
+  margin-bottom: 1rem;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.8em;
+  text-align: center;
+  font-size: 14px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  font-size: 16px;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 /*# sourceMappingURL=styles.css.map */
