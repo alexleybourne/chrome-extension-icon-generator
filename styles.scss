@@ -20,11 +20,12 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  transition-duration: 0.2s;
 }
 
 .container {
-  width: 80%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
   padding-top: 2rem;
   flex-direction: column;
@@ -78,10 +79,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-flow: wrap;
 
-    img {
-      margin-bottom: 1rem;
+    div {
+      width: 200px;
+      height: 200px;
+      margin: 20px 8px 40px 8px;
+      @extend .flex;
+      flex-direction: column;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: scale-down;
+      }
     }
   }
 

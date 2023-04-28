@@ -30,7 +30,6 @@ function resizeImage() {
           preview.src = imageDataURL;
           preview.width = size;
           preview.height = size;
-          outputImages.appendChild(preview);
 
           const link = document.createElement('a');
           link.classList.add('blue-button');
@@ -39,9 +38,11 @@ function resizeImage() {
           )}`;
           link.href = imageDataURL;
           link.innerHTML = `Download ${size}x${size} px`;
-          outputImages.appendChild(link);
 
-          outputImages.appendChild(document.createElement('br'));
+          const div = document.createElement('div');
+          div.appendChild(preview);
+          div.appendChild(link);
+          outputImages.appendChild(div);
 
           zip.file(link.download, imageDataURL.split('base64,')[1], {
             base64: true,

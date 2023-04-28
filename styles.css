@@ -1,4 +1,4 @@
-.flex, body, .container, .container h1, .container .blue-button {
+.flex, body, .container, .container h1, .container .blue-button, .container #outputImages div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,11 +28,13 @@ body {
           flex-direction: column;
   height: 100vh;
   width: 100vw;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 .container {
-  width: 80%;
-  max-width: 800px;
+  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
   padding-top: 2rem;
   -webkit-box-orient: vertical;
@@ -94,14 +96,25 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.container #outputImages div {
+  width: 200px;
+  height: 200px;
+  margin: 20px 8px 40px 8px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-.container #outputImages img {
-  margin-bottom: 1rem;
+.container #outputImages div img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 .container #downloadAll {
