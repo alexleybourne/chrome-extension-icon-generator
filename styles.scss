@@ -4,6 +4,8 @@
   justify-content: center;
 }
 
+$blue: #1e90ff;
+
 .hidden {
   display: none;
   opacity: 0;
@@ -51,8 +53,8 @@ body {
   .blue-button {
     margin-bottom: 10px;
     text-decoration: none;
-    color: #1e90ff;
-    border: 1px solid #1e90ff;
+    color: $blue;
+    border: 1px solid $blue;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
@@ -70,7 +72,7 @@ body {
     }
 
     &:hover {
-      background-color: #1e90ff;
+      background-color: $blue;
       color: #f0f0f0;
     }
   }
@@ -99,6 +101,57 @@ body {
   #downloadAll {
     width: 194px;
   }
+
+  #code-snippet {
+    p {
+      text-align: center;
+    }
+
+    margin-bottom: 20px;
+
+    .code-snippet-container {
+      margin-bottom: 10px;
+      position: relative;
+      background-color: #282c34;
+      color: #abb2bf;
+      border-radius: 4px;
+      padding: 1rem;
+      font-family: 'Courier New', monospace;
+      overflow: auto;
+
+      pre {
+        margin: 0;
+        padding: 20px 64px 2px 0px;
+      }
+
+      .copy-btn {
+        display: flex;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        background: none;
+        outline: 1px solid $blue;
+        color: $blue;
+        font-size: 12px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition-duration: 0.2s;
+
+        svg {
+          height: 16px;
+          width: 16px;
+          margin-left: 4px;
+        }
+      }
+
+      .copy-btn:hover {
+        color: #fff;
+        background-color: $blue;
+      }
+    }
+  }
 }
 
 footer {
@@ -111,7 +164,6 @@ footer {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-style: italic;
     transition-duration: 0.2s;
 
     &:hover {

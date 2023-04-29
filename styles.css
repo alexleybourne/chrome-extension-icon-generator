@@ -121,6 +121,60 @@ body {
   width: 194px;
 }
 
+.container #code-snippet {
+  margin-bottom: 20px;
+}
+
+.container #code-snippet p {
+  text-align: center;
+}
+
+.container #code-snippet .code-snippet-container {
+  margin-bottom: 10px;
+  position: relative;
+  background-color: #282c34;
+  color: #abb2bf;
+  border-radius: 4px;
+  padding: 1rem;
+  font-family: 'Courier New', monospace;
+  overflow: auto;
+}
+
+.container #code-snippet .code-snippet-container pre {
+  margin: 0;
+  padding: 20px 64px 2px 0px;
+}
+
+.container #code-snippet .code-snippet-container .copy-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  outline: 1px solid #1e90ff;
+  color: #1e90ff;
+  font-size: 12px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+.container #code-snippet .code-snippet-container .copy-btn svg {
+  height: 16px;
+  width: 16px;
+  margin-left: 4px;
+}
+
+.container #code-snippet .code-snippet-container .copy-btn:hover {
+  color: #fff;
+  background-color: #1e90ff;
+}
+
 footer {
   margin-top: 2rem;
   font-size: 0.8em;
@@ -132,7 +186,6 @@ footer a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-style: italic;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
 }
