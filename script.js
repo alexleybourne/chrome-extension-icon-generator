@@ -6,7 +6,9 @@ function resizeImage() {
   outputImages.innerHTML = '';
 
   const downloadAllButton = document.getElementById('downloadAll');
+  const codeSnippet = document.getElementById('code-snippet');
   downloadAllButton.classList.add('hidden');
+  codeSnippet.classList.add('hidden');
 
   if (inputImage.files && inputImage.files[0]) {
     const reader = new FileReader();
@@ -50,6 +52,7 @@ function resizeImage() {
         });
 
         downloadAllButton.classList.remove('hidden');
+        codeSnippet.classList.remove('hidden');
         downloadAllButton.disabled = false;
       };
     };
