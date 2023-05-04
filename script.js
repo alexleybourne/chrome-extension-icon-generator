@@ -1,7 +1,30 @@
 const zip = new JSZip();
 
+const inputImage = document.getElementById('inputImage');
+const dragArea = document.getElementById('dragArea');
+
+dragArea.addEventListener('dragover', (e) => {
+  e.preventDefault();
+  dragArea.style.backgroundColor = 'rgba(97, 175, 239, 0.3)';
+});
+
+dragArea.addEventListener('dragleave', (e) => {
+  e.preventDefault();
+  dragArea.style.backgroundColor = '';
+});
+
+dragArea.addEventListener('drop', (e) => {
+  e.preventDefault();
+  dragArea.style.backgroundColor = '';
+  inputImage.files = e.dataTransfer.files;
+  resizeImage();
+});
+
+dragArea.addEventListener('click', (e) => {
+  inputImage.click();
+});
+
 function resizeImage() {
-  const inputImage = document.getElementById('inputImage');
   const outputImages = document.getElementById('outputImages');
   outputImages.innerHTML = '';
 

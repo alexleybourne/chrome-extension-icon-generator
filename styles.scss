@@ -20,15 +20,15 @@ body {
   color: #f0f0f0;
   @extend .flex;
   flex-direction: column;
-  height: 100vh;
   width: 100vw;
+  min-height: 100vh;
   transition-duration: 0.2s;
 }
 
 .container {
   width: 90%;
   max-width: 90%;
-  margin: 0 auto;
+  margin: 20px 0;
   padding-top: 2rem;
   flex-direction: column;
   @extend .flex;
@@ -48,6 +48,42 @@ body {
     margin-bottom: 2rem;
     cursor: pointer;
     color: #f0f0f0;
+  }
+
+  .drag-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+    height: 200px;
+    border: 2px dashed $blue;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px;
+    transition-duration: 0.2s;
+
+    h2 {
+      color: $blue;
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    p {
+      text-align: center;
+      color: $blue;
+    }
+
+    &:active {
+      transform: scale(0.94);
+    }
+
+    &:hover {
+      background-color: rgba(97, 175, 239, 0.3);
+    }
   }
 
   .blue-button {
@@ -74,6 +110,10 @@ body {
     &:hover {
       background-color: $blue;
       color: #f0f0f0;
+    }
+
+    &:active {
+      transform: scale(0.94);
     }
   }
 
@@ -159,6 +199,7 @@ footer {
   font-size: 0.8em;
   text-align: center;
   font-size: 14px;
+  margin-bottom: 20px;
 
   a {
     color: white;
