@@ -27,7 +27,7 @@ dragArea.addEventListener('click', (e) => {
   inputImage.click();
 });
 
-function resizeImage() {
+const resizeImage = () => {
   outputImages.innerHTML = '';
 
   const downloadAllButton = document.getElementById('downloadAll');
@@ -90,9 +90,9 @@ function resizeImage() {
     };
     reader.readAsDataURL(inputImage.files[0]);
   }
-}
+};
 
-function getFileExtension(mimeType) {
+const getFileExtension = (mimeType) => {
   switch (mimeType) {
     case 'image/jpeg':
       return 'jpeg';
@@ -101,7 +101,7 @@ function getFileExtension(mimeType) {
     default:
       return 'png'; // Defaults to png
   }
-}
+};
 
 const copyToClipboard = () => {
   const codeSnippet = document.getElementById('codeSnippet');
@@ -139,7 +139,7 @@ const copyToClipboard = () => {
   selection.removeAllRanges();
 };
 
-function downloadAll() {
+const downloadAll = () => {
   zip.generateAsync({ type: 'blob' }).then(function (content) {
     const link = document.createElement('a');
     link.href = URL.createObjectURL(content);
@@ -148,4 +148,4 @@ function downloadAll() {
     link.click();
     document.body.removeChild(link);
   });
-}
+};

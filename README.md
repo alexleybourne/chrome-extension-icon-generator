@@ -3,7 +3,7 @@
 ![GitHub followers](https://img.shields.io/github/followers/alexleybourne?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/AlexLeybourne?style=social)
 
-Tool Link: [Chrome Extension Icon Generator](alexleybourne.github.io/chrome-extension-icon-creator)
+Tool Link: [Chrome Extension Icon Generator](https://alexleybourne.github.io/chrome-extension-icon-generator/)
 
 This is a simple tool to generate icons for Chrome extensions. It takes any image above 128x128px and generates all the sizes needed for Chrome extensions.
 

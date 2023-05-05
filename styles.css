@@ -1,4 +1,4 @@
-.flex, body, .container, .container h1, .container .drag-area h2, .container .blue-button, .container #outputImages div {
+.flex, body, .container, .container h1, .container .drag-area h2, .container .blue-button, .container #outputImages div, footer .github, footer .github a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,23 +222,33 @@ body {
           transition-duration: 0.2s;
 }
 
+.container #code-snippet .code-snippet-container .copy-btn:active {
+  -webkit-transform: scale(0.94);
+          transform: scale(0.94);
+}
+
+.container #code-snippet .code-snippet-container .copy-btn:hover {
+  background-color: #1e90ff;
+  color: #f0f0f0;
+}
+
 .container #code-snippet .code-snippet-container .copy-btn svg {
   height: 16px;
   width: 16px;
   margin-left: 4px;
 }
 
-.container #code-snippet .code-snippet-container .copy-btn:hover {
-  color: #fff;
-  background-color: #1e90ff;
-}
-
 footer {
-  margin-top: 2rem;
+  margin: 2rem;
   font-size: 0.8em;
   text-align: center;
   font-size: 14px;
-  margin-bottom: 20px;
+}
+
+footer .github svg {
+  margin-right: 4px;
+  height: 16px;
+  width: 16px;
 }
 
 footer a {

@@ -186,27 +186,43 @@ body {
         cursor: pointer;
         transition-duration: 0.2s;
 
+        &:active {
+          transform: scale(0.94);
+        }
+
+        &:hover {
+          background-color: $blue;
+          color: #f0f0f0;
+        }
+
         svg {
           height: 16px;
           width: 16px;
           margin-left: 4px;
         }
       }
-
-      .copy-btn:hover {
-        color: #fff;
-        background-color: $blue;
-      }
     }
   }
 }
 
 footer {
-  margin-top: 2rem;
+  margin: 2rem;
   font-size: 0.8em;
   text-align: center;
   font-size: 14px;
-  margin-bottom: 20px;
+
+  .github {
+    @extend .flex;
+
+    a {
+      @extend .flex;
+    }
+    svg {
+      margin-right: 4px;
+      height: 16px;
+      width: 16px;
+    }
+  }
 
   a {
     color: white;
