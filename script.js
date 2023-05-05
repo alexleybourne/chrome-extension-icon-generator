@@ -2,6 +2,9 @@ const zip = new JSZip();
 
 const inputImage = document.getElementById('inputImage');
 const dragArea = document.getElementById('dragArea');
+const outputImages = document.getElementById('outputImages');
+const uploadTitle = document.getElementById('uploadTitle');
+const uploadSubtitle = document.getElementById('uploadSubtitle');
 
 dragArea.addEventListener('dragover', (e) => {
   e.preventDefault();
@@ -25,15 +28,21 @@ dragArea.addEventListener('click', (e) => {
 });
 
 function resizeImage() {
-  const outputImages = document.getElementById('outputImages');
   outputImages.innerHTML = '';
 
   const downloadAllButton = document.getElementById('downloadAll');
   const codeSnippet = document.getElementById('code-snippet');
   downloadAllButton.classList.add('hidden');
   codeSnippet.classList.add('hidden');
+  uploadTitle.innerHTML = 'Upload file';
+  uploadSubtitle.innerHTML = 'click or drag and drop your file here';
+  dragArea.classList.remove('small');
 
   if (inputImage.files && inputImage.files[0]) {
+    uploadTitle.innerHTML = 'Click to change file';
+    uploadSubtitle.innerHTML = inputImage.files[0].name;
+    dragArea.classList.add('small');
+
     const reader = new FileReader();
     reader.onload = function (event) {
       const img = new Image();

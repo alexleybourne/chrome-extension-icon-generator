@@ -75,7 +75,7 @@
         <input type="file" id="inputImage" onchange="resizeImage()" hidden />
         <label for="inputImage" class="blue-button hidden"> </label>
         <h2>
-          Upload file
+          <span id="uploadTitle">Upload file</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -92,7 +92,7 @@
             />
           </svg>
         </h2>
-        <p>click or drag and drop your file here</p>
+        <p id="uploadSubtitle">click or drag and drop your file here</p>
       </div>
       <div id="fileInfo" class="file-info hidden">
         <span id="fileName"></span>

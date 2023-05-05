@@ -1,4 +1,4 @@
-.flex, body, .container, .container h1, .container .blue-button, .container #outputImages div {
+.flex, body, .container, .container h1, .container .drag-area h2, .container .blue-button, .container #outputImages div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,8 +28,6 @@ body {
           flex-direction: column;
   width: 100vw;
   min-height: 100vh;
-  -webkit-transition-duration: 0.2s;
-          transition-duration: 0.2s;
 }
 
 .container {
@@ -57,6 +55,10 @@ body {
   margin-bottom: 2rem;
   cursor: pointer;
   color: #f0f0f0;
+}
+
+.container .small {
+  height: 100px !important;
 }
 
 .container .drag-area {
@@ -89,11 +91,13 @@ body {
 }
 
 .container .drag-area h2 svg {
+  margin-left: 4px;
   width: 22px;
   height: 22px;
 }
 
 .container .drag-area p {
+  margin-top: 0;
   text-align: center;
   color: #1e90ff;
 }
@@ -104,6 +108,7 @@ body {
 }
 
 .container .drag-area:hover {
+  border: 2px solid #1e90ff;
   background-color: rgba(97, 175, 239, 0.3);
 }
 
