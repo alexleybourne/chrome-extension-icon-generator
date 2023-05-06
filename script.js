@@ -1,4 +1,4 @@
-const zip = new JSZip();
+let zip = new JSZip();
 
 const inputImage = document.getElementById('inputImage');
 const dragArea = document.getElementById('dragArea');
@@ -28,6 +28,8 @@ dragArea.addEventListener('click', (e) => {
 });
 
 const resizeImage = () => {
+  // Created new zip file to avoid appending to the same zip file
+  zip = new JSZip();
   outputImages.innerHTML = '';
 
   const downloadAllButton = document.getElementById('downloadAll');
